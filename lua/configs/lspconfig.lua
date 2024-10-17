@@ -16,6 +16,10 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+require("mason-lspconfig").setup {
+  ensure_installed = { "lua_ls", "rust_analyzer", "clangd", "cmake", "pylsp", "gopls", "pbls" }
+}
+
 -- configuring single server, example: typescript
 -- lspconfig.ts_ls.setup {
 --   on_attach = nvlsp.on_attach,
